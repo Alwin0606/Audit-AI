@@ -1,71 +1,184 @@
-# Audit AI — Intelligent Audit & Risk Detection
+# 🔍 Audit AI — Intelligent Financial Audit & Risk Detection
 
-## Overview
-Audit AI is an intelligent financial auditing application designed to analyze financial records, identify unusual transactions, detect duplicate invoices, and highlight potential financial risks.
+**Audit AI** is a Python-based financial audit application designed to analyze transaction records, identify potential financial irregularities, and help auditors review suspicious activities efficiently.
 
-## Features
-- Financial data analysis using CSV and Excel files
-- Duplicate invoice detection
-- Suspicious transaction and anomaly detection
-- Debit and credit mismatch identification
-- Risk scoring and audit findings
-- Audit report generation
-- Professional dashboard with audit history
+The application provides a web-based dashboard for analyzing transaction data, highlighting potential risks, and generating downloadable audit reports.
 
-## Technology Stack
-- Python
-- Flask
-- Pandas
-- Scikit-learn
-- HTML, CSS, JavaScript
-- SQLite
+## ✨ Features
 
-## How It Works
-1. Upload financial records.
-2. Analyze transactions automatically.
-3. Identify unusual entries and potential inconsistencies.
-4. Review findings and risk scores.
-5. Generate an audit report.
+- **Transaction Analysis:** Analyze financial transaction records uploaded or supplied in CSV format.
+- **Duplicate Invoice Detection:** Identify potentially duplicated invoices for further investigation.
+- **Unusual Transaction Detection:** Flag transactions with unusual amounts that may require additional review.
+- **Risk Classification:** Categorize findings by risk level to help prioritize audit reviews.
+- **Interactive Dashboard:** View transaction totals, audit findings, risk summaries, and review status.
+- **Downloadable Audit Reports:** Export analysis results as JSON for documentation and further review.
+- **Sample Dataset:** Test the application using the included sample transaction data.
+- **Modular Architecture:** Keep the web application and audit analysis logic organized in separate Python modules.
 
-## Installation
-Clone the repository:
+## 🛠️ Technology Stack
+
+| Technology | Purpose |
+|---|---|
+| Python | Core application logic |
+| Flask | Web application and API |
+| Pandas | Transaction data processing |
+| Scikit-learn | Machine-learning tools for supported analysis workflows |
+| HTML5 | Dashboard structure |
+| CSS3 | Dashboard styling |
+| JavaScript | Frontend interactions |
+| CSV / JSON | Transaction input and report output |
+
+## 📁 Project Structure
+
+```text
+Audit-AI/
+├── app.py
+├── audit_engine.py
+├── requirements.txt
+├── sample_transactions.csv
+├── README.md
+├── .gitignore
+├── templates/
+│   └── index.html
+└── static/
+    ├── style.css
+    └── script.js
+```
+
+## ⚙️ Prerequisites
+
+Before running Audit AI, install:
+
+- Python 3.13 (or another version compatible with the project's dependencies)
+- pip
+- Git (optional, for cloning the repository)
+
+## 🚀 Installation and Setup
+
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Alwin0606/Audit-AI.git
 cd Audit-AI
 ```
 
-Create a virtual environment:
+### 2. Create a virtual environment
 
-```bash
+**Windows PowerShell:**
+
+```powershell
 py -3.13 -m venv .venv
 ```
 
-Activate it on Windows PowerShell:
+### 3. Activate the virtual environment
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 ```
 
-Install dependencies after the project requirements are configured:
+If PowerShell blocks script activation, run the following command in the current terminal and try again:
 
-```bash
+```powershell
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+```
+
+### 4. Install dependencies
+
+```powershell
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
-Run the application after setup:
+### 5. Start the application
 
-```bash
+```powershell
 python app.py
 ```
 
-Open `http://127.0.0.1:5000` in your browser.
+### 6. Open the dashboard
 
-## Project Status
-🚧 Under Development
+Visit the following address in your browser:
 
-## Disclaimer
-Audit AI identifies potential anomalies and financial inconsistencies. Its findings require review by a qualified auditor and do not independently establish fraud.
+**http://127.0.0.1:5000/**
 
-## Author
-Alwin0606
+Keep the terminal running while using the application.
+
+## 📊 How to Use
+
+1. Start the Flask application.
+2. Open the Audit AI dashboard in your browser.
+3. Provide transaction data using the application's available input workflow.
+4. Run the audit analysis.
+5. Review the detected findings and risk classifications.
+6. Download the generated JSON audit report if needed.
+
+You can begin testing with the included `sample_transactions.csv` file.
+
+## 🔎 Audit Capabilities
+
+### Duplicate Invoice Detection
+
+Identifies invoice records that appear to be duplicated so that an auditor can investigate possible duplicate payments or data-entry errors.
+
+### Unusual Transaction Detection
+
+Highlights transaction amounts that differ significantly from expected patterns and may warrant further review.
+
+### Risk-Based Review
+
+Organizes findings by risk level to help auditors focus on potentially significant issues first.
+
+### Audit Report Generation
+
+Provides a downloadable JSON report containing the analysis summary and detected findings, where supported by the application.
+
+## 🔐 Security and Data Privacy
+
+- Do not upload confidential customer records, bank details, or real company financial data to a public repository.
+- Use synthetic or anonymized data for development and demonstrations.
+- Keep API keys, credentials, and environment-specific secrets out of source control.
+- Review generated reports before sharing them.
+- Use a production-ready server and appropriate authentication before deploying sensitive financial data.
+
+## ⚠️ Limitations and Disclaimer
+
+Audit AI is an audit-assistance tool, not a replacement for a qualified auditor or a formal financial audit.
+
+A flagged transaction is **not proof of fraud or misconduct**. Unusual amounts and duplicate invoices may have legitimate explanations and must be reviewed in context.
+
+Detection quality depends on the input data, implemented rules, and analysis methods. Findings should be independently verified before making financial or compliance decisions.
+
+## 🎯 Project Objectives
+
+- Automate selected financial transaction review tasks.
+- Improve the visibility of potential irregularities.
+- Reduce repetitive manual review work.
+- Provide structured audit findings and downloadable reports.
+- Demonstrate practical Python, data-analysis, and web-development skills.
+
+## 🔮 Future Enhancements
+
+- Excel file import and validation.
+- Configurable audit rules and thresholds.
+- More advanced anomaly-detection models.
+- Explainable risk scoring and finding-level evidence.
+- Audit history and report comparison.
+- User authentication and role-based access.
+- Secure database integration and deployment.
+- Additional report formats, such as PDF and Excel.
+
+*These are planned enhancements and may not be implemented in the current version.*
+
+## 👨‍💻 Author
+
+**GitHub:** [@Alwin0606](https://github.com/Alwin0606)
+
+**Repository:** [Audit AI](https://github.com/Alwin0606/Audit-AI)
+
+## 📄 License
+
+No license has been specified yet. Add a `LICENSE` file if you intend to publish this project under an open-source license.
+
+---
+
+**Audit AI — Turning transaction data into actionable audit insights.**
