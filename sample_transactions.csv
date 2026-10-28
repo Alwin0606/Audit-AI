@@ -1,0 +1,16 @@
+﻿transaction_id,invoice_id,amount,vendor,transaction_type
+TXN001,INV1001,1500,ABC Supplies,Payment
+TXN002,INV1002,2300,Metro Traders,Payment
+TXN003,INV1003,1750,Northstar Ltd,Refund
+TXN004,INV1004,3200,ABC Supplies,Payment
+TXN005,INV1005,890,City Office,Payment
+TXN006,INV1006,4500,Metro Traders,Payment
+TXN007,INV1007,1250,Northstar Ltd,Payment
+TXN008,INV1008,2100,City Office,Payment
+TXN009,INV1009,1800,ABC Supplies,Payment
+TXN010,INV1010,2750,Metro Traders,Payment
+TXN011,INV1011,1600,Northstar Ltd,Payment
+TXN012,INV1012,9000,City Office,Payment
+TXN013,INV1013,1250,Northstar Ltd,Payment
+TXN014,INV1013,1250,Northstar Ltd,Payment
+TXN015,INV1015,2200,ABC Supplies,Payment
