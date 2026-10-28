@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit AI | Intelligent Financial Auditing</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand"><span class="brand-icon">A</span> Audit<span>AI</span></div>
+        <p class="nav-label">WORKSPACE</p>
+        <a class="nav-item active" href="/">▦ &nbsp; Audit Overview</a>
+        <a class="nav-item" href="#upload">⇧ &nbsp; New Audit</a>
+        <div class="sidebar-bottom">
+            <span class="status-dot"></span> Audit Engine Ready
+            <p class="muted">Version 1.0.0</p>
+        </div>
+    </aside>
+
+    <main class="main-content">
+        <header class="topbar">
+            <div>
+                <p class="eyebrow">FINANCIAL INTELLIGENCE PLATFORM</p>
+                <h1>Audit Overview</h1>
+                <p class="muted">Detect anomalies. Understand risk. Audit smarter.</p>
+            </div>
+            <div class="system-status"><span class="status-dot"></span> SYSTEM ONLINE</div>
+        </header>
+
+        <section class="welcome-panel">
+            <div>
+                <p class="eyebrow">INTELLIGENT AUDIT WORKSPACE</p>
+                <h2>Financial clarity starts here.</h2>
+                <p>Analyze transaction records and uncover potential audit risks in seconds.</p>
+                <a class="primary-button" href="#upload">Start an audit ↗</a>
+            </div>
+            <div class="hero-symbol">◎</div>
+        </section>
+
+        <section class="metrics">
+            <article class="metric-card">
+                <p>Total Transactions</p>
+                <h2 id="totalTransactions">—</h2>
+                <span>Records analyzed</span>
+            </article>
+            <article class="metric-card">
+                <p>Audit Findings</p>
+                <h2 id="totalFindings">—</h2>
+                <span>Potential issues detected</span>
+            </article>
+            <article class="metric-card">
+                <p>High-Risk Findings</p>
+                <h2 id="highRisk">—</h2>
+                <span>Require closer review</span>
+            </article>
+            <article class="metric-card">
+                <p>Audit Status</p>
+                <h2 class="status-text" id="auditStatus">READY</h2>
+                <span id="statusDescription">Awaiting your file</span>
+            </article>
+        </section>
+
+        <section class="workspace-grid">
+            <article class="panel upload-panel" id="upload">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">DATA INPUT</p>
+                        <h2>Start a new audit</h2>
+                    </div>
+                    <span class="panel-icon">⇧</span>
+                </div>
+
+                <p class="muted">Upload financial transactions in CSV or Excel format.</p>
+
+                <form id="auditForm">
+                    <label class="drop-zone" for="auditFile">
+                        <span class="upload-icon">↑</span>
+                        <strong id="fileLabel">Choose a financial data file</strong>
+                        <span>CSV or XLSX · Maximum 10 MB</span>
+                        <input id="auditFile" name="file" type="file"
+                               accept=".csv,.xlsx,.xlsm" required>
+                    </label>
+                    <button class="primary-button submit-button" id="auditButton" type="submit">
+                        Analyze Transactions →
+                    </button>
+                </form>
+                <p id="message" class="message" role="status">Ready to analyze your data.</p>
+            </article>
+
+            <article class="panel">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">AUDIT INTELLIGENCE</p>
+                        <h2>Detection coverage</h2>
+                    </div>
+                    <span class="panel-icon">⌕</span>
+                </div>
+                <div class="coverage-item">
+                    <span class="coverage-symbol">↻</span>
+                    <div><strong>Duplicate invoices</strong><p>Repeated vendor invoice IDs</p></div>
+                </div>
+                <div class="coverage-item">
+                    <span class="coverage-symbol">⌁</span>
+                    <div><strong>Unusual transactions</strong><p>Machine-learning anomaly flags</p></div>
+                </div>
+                <div class="coverage-item">
+                    <span class="coverage-symbol">✓</span>
+                    <div><strong>Data quality checks</strong><p>Missing and invalid information</p></div>
+                </div>
+                <p class="notice">Audit flags are indicators for human review, not proof of fraud.</p>
+            </article>
+        </section>
+
+        <section class="panel results-panel" id="resultsPanel">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">ANALYSIS OUTPUT</p>
+                    <h2>Audit findings</h2>
+                </div>
+                <button id="downloadReport" class="secondary-button" type="button" disabled>
+                    Export report ↓
+                </button>
+            </div>
+            <div id="results">
+                <div class="empty-state">
+                    <span>⌕</span>
+                    <strong>No audit results yet</strong>
+                    <p>Upload a transaction file to view audit findings here.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>Audit AI · Intelligent Financial Auditing <span>Built for responsible risk review</span></footer>
+    </main>
+</body>
+</html>
